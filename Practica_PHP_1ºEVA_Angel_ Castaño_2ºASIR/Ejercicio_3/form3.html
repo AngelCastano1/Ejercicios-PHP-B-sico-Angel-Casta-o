@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Alumno</title>
+  <style>
+    form {
+      border: solid 4px black;
+    }
+    fieldset {
+      border: none;
+    }
+    .cuadroIzda {
+      float: left;
+    }
+    .cuadroDrcha {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <form action="datos_alumno.php" method="post">
+    <fieldset>
+      <div class="cuadroIzda">
+        <strong>DATOS DEL ALUMNO:</strong><br><br>
+        Nombre: <br><input type="text" name="nombre" required><br><br>
+        Teléfono: <br><input type="number" name="telef" required><br><br>
+        Matriculado: <input type="checkbox" name="matriculado"><br><br>
+        Mostrar datos: <br>
+        <select name="modo">
+          <option value="pantalla">Por pantalla</option>
+          <option value="archivo">Guardar en archivo</option>
+        </select>
+      </div>
+
+      <div class="cuadroDrcha">
+        <p>Enseñanza:</p>
+        <label><input type="radio" name="enseñanza" value="secundaria" required> Secundaria</label>
+        <label><input type="radio" name="enseñanza" value="ciclo_medio"> Ciclo Medio</label><br>
+        <label><input type="radio" name="enseñanza" value="bachillerato"> Bachillerato</label>
+        <label><input type="radio" name="enseñanza" value="ciclo_superior"> Ciclo Superior</label>
+      </div>
+    </fieldset>
+    <br style="clear:both;">
+    <input type="submit" value="Enviar datos">
+  </form>
+</body>
+</html>
